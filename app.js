@@ -2,9 +2,9 @@
 
 const button = document.querySelector("#btn");
 const body = document.querySelector("body");
-const colorCode = document.querySelector(".colorCodes");
-const title = document.querySelector("h1");
 const bgText = document.querySelector(".bgText");
+const colorField1 = document.querySelector(".color1");
+const colorField2 = document.querySelector(".color2");
 
 const hex = [
   "0",
@@ -33,17 +33,17 @@ const colorMaker = function () {
   return "#" + newColor.join("");
 };
 
-let color1;
-let color2;
-
 button.addEventListener("click", () => {
-  color1 = colorMaker().toUpperCase();
-  color2 = colorMaker().toUpperCase();
+  const color1 = colorMaker().toUpperCase();
+  const color2 = colorMaker().toUpperCase();
   body.style.backgroundImage = `linear-gradient(to left, ${color1}, ${color2}`;
-  colorCode.textContent = color2 + " " + color1;
+  colorField1.textContent = color1;
+  colorField2.textContent = color2;
 
   bgText.textContent = "Color";
   bgText.style.backgroundColor = `${color1}50`;
   bgText.style.webkitBackgroundClip = `text`;
   bgText.style.webkitTextFillColor = `transparent`;
+
+  button.style.backgroundColor = `${color2}50`;
 });
