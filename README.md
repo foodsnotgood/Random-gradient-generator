@@ -1,4 +1,4 @@
-# https---github.com-foodsnotgood-Random-gradient-generator
+#Random-gradient-generator
 
 I found this excercise on dev.to in a article by Miguel Nunez "15 Beginner JavaScript Projects to improve your front-end skills" and found this one specifically interesting
 because I was just getting into DOM manipulation.
